@@ -1,0 +1,43 @@
+{
+  "name": "learnlab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:seed": "npx tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@prisma/client": "^6.2.0",
+    "next-auth": "^5.0.0-beta.25",
+    "@auth/prisma-adapter": "^2.7.4",
+    "bcryptjs": "^2.4.3",
+    "stripe": "^17.5.0",
+    "zod": "^3.24.1",
+    "@react-pdf/renderer": "^4.1.6",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/uuid": "^10.0.0",
+    "prisma": "^6.2.0",
+    "tsx": "^4.19.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.1.0",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "postcss": "^8.5.0"
+  }
+}
