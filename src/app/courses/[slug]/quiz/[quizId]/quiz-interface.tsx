@@ -33,7 +33,12 @@ export function QuizInterface({ slug, quiz, lastAttempt }: QuizInterfaceProps) {
     const res = await fetch(`/api/courses/${slug}/quizzes/${quiz.id}/attempts`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ answers }),
+      body: JSON.stringify({
+        answers: Object.entries(answers).map(([questionId, selectedOptionId]) => ({
+          questionId,
+          selectedOptionId,
+        })),
+      }),
     });
     const data = await res.json();
     setResult(data);

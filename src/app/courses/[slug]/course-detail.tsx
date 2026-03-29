@@ -48,7 +48,7 @@ export function CourseDetail({ course, enrollment, session, totalLessons, totalD
       const res = await fetch("/api/payments/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ courseSlug: course.slug }),
+        body: JSON.stringify({ courseId: course.id }),
       });
       const data = await res.json();
       if (data.url) {
