@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/navbar";
+import DemoModeBanner from "@/components/demo-mode-banner";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
             </div>
           </footer>
         </Providers>
+      <DemoModeBanner />
       </body>
     </html>
   );
