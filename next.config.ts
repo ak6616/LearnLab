@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       bodySizeLimit: "2mb",
     },
   },
-  async headersasync headers() {
+  async headers() {
     return [
       {
         source: '/(.*)',
@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  poweredByHeader: false
+  poweredByHeader: false,
 };
 
 export default nextConfig;
